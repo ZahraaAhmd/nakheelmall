@@ -78,6 +78,17 @@ h3 {
   line-height: 32px;
 }
 
+.block-title {
+  font-size: 18px;
+  letter-spacing: 10px;
+  text-align: center;
+  padding: 30px 0;
+  font-weight: normal;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
 /*** text color styles ****/
 .text-brown {
   color: #B0776C;
@@ -121,6 +132,17 @@ h3 {
 .btn-white {
   background: #fff;
   color: #53565A;
+}
+
+.btn-outline-brown {
+  border: 1px solid #B0776C;
+  color: #B0776C;
+  padding: 10px 15px;
+}
+
+.btn-outline-brown:hover {
+  background: #B0776C;
+  color: #fff;
 }
 
 /*** grid style ****/
@@ -309,13 +331,47 @@ header nav ul li {
   display: inline-block;
 }
 
-header nav ul li a {
+header nav ul li a,
+header nav ul li .menu-title {
   display: block;
   color: #B0776C;
   font-size: 15px;
   line-height: 23px;
   text-transform: uppercase;
   padding: 12px 16px;
+  cursor: pointer;
+}
+
+header nav ul li.dropdown {
+  position: relative;
+}
+
+header nav ul li.dropdown .dropdown-menu {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 180px;
+}
+
+header nav ul li.dropdown .dropdown-menu li {
+  display: block;
+  width: 100%;
+}
+
+header nav ul li.dropdown .dropdown-menu li a {
+  display: block;
+  width: 100%;
+  padding: 9px 16px;
+}
+
+header nav ul li.dropdown .dropdown-menu.show {
+  display: block;
+}
+
+header nav ul li.dropdown:hover .dropdown-menu {
+  display: block;
 }
 
 header .mobile-view {
@@ -359,7 +415,184 @@ header .mobile-view a i {
   font-size: 25px;
 }
 
+/*** search box style ***/
+.NM-search-block {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background: rgba(176, 119, 108, 0.9);
+  padding: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.NM-search-block.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.NM-search-block .inner-container {
+  width: 100%;
+}
+
+.NM-search-block .toggle-search {
+  position: absolute;
+  top: 45px;
+  right: 45px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.NM-search-block form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.NM-search-block form input {
+  outline: none;
+  box-shadow: none;
+  padding: 15px;
+  font-size: 17px;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  width: calc(100% - 40px);
+}
+
+.NM-search-block form input::placeholder {
+  color: #DFC2C3 !important;
+  font-size: 16px;
+  /* text-transform: uppercase; */
+}
+
+.NM-search-block form .btn {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 25px;
+}
+
 /*** view page styles ****/
+.NM-stories {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+.NM-stories .bg-img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.NM-stories .bg-img img {
+  max-width: 265px;
+}
+
+.NM-stories .container {
+  position: relative;
+}
+
+.NM-stories h1 {
+  font-weight: 500;
+  text-transform: none;
+  line-height: 1.2;
+  margin-bottom: 5rem;
+}
+
+.NM-stories .story-slider h2 {
+  line-height: 30px;
+  margin-top: 70px;
+  padding-bottom: 30px;
+  font-size: 36px;
+  color: #B0776C;
+  font-weight: bold;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-family: Arial;
+}
+
+.NM-stories .story-slider p {
+  font-size: 17px;
+  line-height: 18px;
+  padding-bottom: 30px;
+  margin-bottom: 16px;
+}
+
+.NM-stories .story-slider .company-logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.NM-stories .story-slider .company-logo img {
+  width: 100px;
+}
+
+.NM-stories .story-slider .company-logo .btn {
+  text-transform: uppercase;
+}
+
+.NM-stories .story-slider .story-img {
+  position: relative;
+  height: 100%;
+}
+
+.NM-stories .story-slider .story-img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.NM-stories .story-slider .story-img .img-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.NM-stories .slick-dots {
+  text-align: initial;
+}
+
+.NM-stories .slick-dots li button {
+  width: 10px;
+  height: 10px;
+  margin: 5px 7px;
+  background: transparent;
+  display: block;
+  -webkit-backface-visibility: visible;
+  transition: opacity .2s ease;
+  border-radius: 30px;
+  transform: rotate(45deg);
+  margin-right: 10px;
+  margin-left: 10px;
+  border: 1px solid #53565A;
+  border-radius: 0 !important;
+}
+
+.NM-stories .slick-dots li.slick-active button {
+  background: #AF695B;
+  border-color: #AF695B;
+}
+
 .NM-intro h1 {
   padding-bottom: 20px;
 }
@@ -696,6 +929,12 @@ footer .social-icons a i {
 }
 
 /*** pages media query ****/
+@media (max-width: 1400px) {
+  .NM-stories .bg-img img {
+    max-width: 200px;
+  }
+}
+
 @media (max-width: 1199.98px) {
   header {
     padding-left: 0;
@@ -710,6 +949,9 @@ footer .social-icons a i {
   }
   .NM-intro .pr-lg-80 {
     padding-right: 30px;
+  }
+  .NM-stories .bg-img {
+    display: none;
   }
 }
 
@@ -760,7 +1002,8 @@ footer .social-icons a i {
   header nav ul li {
     display: block;
   }
-  header nav ul li a {
+  header nav ul li a,
+  header nav ul li .menu-title {
     background: rgba(249, 249, 249, 0.15);
     border-radius: 4px;
     padding: 13px 16px 11px 16px;
@@ -773,6 +1016,10 @@ footer .social-icons a i {
   header nav ul li.contact-item .nav-link {
     margin-left: 0;
     border: 0;
+  }
+  header nav ul li.dropdown .dropdown-menu {
+    position: static;
+    background: inherit;
   }
   .NM-slider .slick-slider .slick-prev,
   .NM-slider .slick-slider .slick-next {
@@ -789,6 +1036,17 @@ footer .social-icons a i {
   .NM-company-info .right-side {
     padding-left: 0;
     padding-right: 0;
+  }
+  .NM-stories .NM-row {
+    flex-direction: column-reverse;
+  }
+  .NM-stories .story-slider h2 {
+    margin-top: 50px;
+    padding-bottom: 30px;
+    font-size: 25px;
+  }
+  .NM-stories .story-slider .story-img img {
+    object-fit: initial;
   }
 }
 
