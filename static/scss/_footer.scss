@@ -1,0 +1,90 @@
+/**** footer style *****/
+
+footer {
+    background: #FBF7F7;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    .d-flex {
+        justify-content: space-between;
+        .subscribe-block {
+            display: flex;
+            margin-bottom: 50px;
+            h3 {
+                font-size: 18px;
+                text-transform: uppercase;
+                line-height: 24px;
+                padding-right: 30px;
+                text-align: right;
+                padding-top: 5px;
+                max-width: 195px;
+                font-weight: 400;
+            }
+            form {
+                width: 515px;
+                display: flex;
+                .form-input {
+                    width: 100%;
+                    max-width: 370px;
+                    height: 60px;
+                    background: #fff;
+                    border: 0;
+                    color: #AF695B;
+                    outline: none;
+                    padding: 6px 12px;
+                    font-size: 16px;
+                    &::placeholder {
+                        color: #DFC2C3;
+                    }
+                }
+                .btn {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 60px;
+                    background: #AF695B;
+                    border-radius: 0;
+                    border: 0;
+                    padding: 10px 30px;
+                    color: #fff;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        list-style-type: none;
+        li {
+            position: relative;
+            padding-bottom: 15px;
+            font-size: 16px;
+            &:before {
+                content: "\25AA";
+                color: #B0776C;
+                font-weight: bold;
+                display: inline-block;
+                width: 1em;
+                margin-right: 10px;
+            }
+            a {
+                text-transform: uppercase;
+                text-decoration: none;
+                -webkit-transition: 0.5s;
+                transition: 0.5s;
+                color: #53565A;
+            }
+        }
+    }
+    .social-icons {
+        display: inline-block;
+        a {
+            display: inline-block;
+            margin-left: 10px;
+            i {
+                color: #AF695B;
+            }
+        }
+    }
+}

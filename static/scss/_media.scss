@@ -1,0 +1,285 @@
+    /*** pages media query ****/
+    
+    @media(max-width:1199.98px) {
+        header {
+            padding-left: 0;
+            padding-right: 0;
+            nav {
+                .nav-brand {
+                    margin-right: 16px;
+                    margin-left: 16px;
+                }
+                ul li a {
+                    padding: 12px 5px;
+                }
+            }
+        }
+        .NM {
+            &-intro {
+                .pr-lg-80 {
+                    padding-right: 30px;
+                }
+            }
+        }
+    }
+    
+    @media(max-width:991.98px) {
+        .container {
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+        header {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgb(239, 239, 239);
+            nav {
+                .mobile-view {
+                    display: flex
+                }
+                .nav-collapse {
+                    position: fixed;
+                    height: 100%;
+                    top: 0;
+                    right: 0;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    background: $brown;
+                    width: 100%;
+                    max-width: 287px;
+                    padding: 24px;
+                    overflow-y: auto;
+                    height: 100%;
+                    overflow-x: hidden;
+                    transform: translateX(287px);
+                    transition: all 0.3s ease-in-out;
+                    &.show {
+                        transform: translateX(0px);
+                        &::before {
+                            opacity: 1;
+                        }
+                    }
+                    .nav-brand {
+                        display: none;
+                    }
+                }
+                ul {
+                    width: 100%;
+                    li {
+                        display: block;
+                        a {
+                            background: rgba(249, 249, 249, 0.15);
+                            border-radius: 4px;
+                            padding: 13px 16px 11px 16px;
+                            font-size: 16px;
+                            line-height: 24px;
+                            color: #F9F9F9;
+                            margin-bottom: 8px;
+                            font-weight: 400;
+                        }
+                        &.contact-item {
+                            .nav-link {
+                                margin-left: 0;
+                                border: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .NM-slider {
+            .slick-slider {
+                .slick-prev,
+                .slick-next {
+                    width: 35px;
+                    height: 35px;
+                }
+                .slick-prev {
+                    left: 15%;
+                }
+                .slick-next {
+                    right: 15%;
+                }
+            }
+        }
+        .NM-company-info {
+            .left-side,
+            .right-side {
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+    
+    @media(max-width:767.98px) {
+        .hidden-sm {
+            display: none
+        }
+        .main-content {
+            margin-top: 100px;
+        }
+        h1 {
+            font-size: 30px;
+        }
+        .NM-title {
+            font-size: 26px;
+            line-height: 32px;
+        }
+        .NM {
+            &-intro {
+                .NM-row {
+                    flex-direction: column-reverse;
+                }
+                .img-fluid {
+                    margin-bottom: 30px;
+                }
+                h1 {
+                    margin-bottom: 10px;
+                    br {
+                        display: none
+                    }
+                }
+            }
+            &-statistics {
+                padding-top: 60px;
+                h3 {
+                    width: 100%;
+                    margin-right: 0;
+                    text-align: center;
+                    margin-bottom: 30px;
+                    br {
+                        display: none
+                    }
+                }
+                .numbers {
+                    h3 {}
+                }
+            }
+            &-text-box {
+                line-height: 1.7;
+                font-size: 16px;
+                &.video-box {
+                    padding-top: 60px;
+                    padding-bottom: 60px;
+                }
+            }
+            &-slider {
+                padding-bottom: 0;
+                .slick-list {
+                    //padding: 0 50px
+                }
+                .slick-slider {
+                    .slick-next {
+                        right: 29px;
+                    }
+                    .slick-prev {
+                        left: 29px;
+                    }
+                    .slick-slide {
+                        padding: 0 50px;
+                        .slider-box {
+                            transform: scale(1);
+                            .img-block::before {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                .slider-box {
+                    h3 {
+                        font-size: 20px;
+                        line-height: 36px;
+                    }
+                    img {
+                        height: auto;
+                    }
+                }
+            }
+            &-company-info {
+                margin-bottom: 0 !important;
+                .left-side {
+                    display: none;
+                }
+                .right-side {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+            &-video {
+                iframe {
+                    height: 400px !important
+                }
+            }
+        }
+        footer {
+            .d-flex {
+                justify-content: space-between;
+                align-items: center;
+                a {
+                    width: 100%;
+                    text-align: center;
+                }
+                .subscribe-block {
+                    width: 100%;
+                    margin-top: 30px;
+                    h3 {
+                        display: none;
+                    }
+                    form {
+                        width: 100%;
+                        .btn {
+                            height: 50px;
+                            padding: 10px 19px;
+                        }
+                        .form-input {
+                            max-width: calc(100% - 131px);
+                            height: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @media(max-width:575.98px) {
+        .text-big {
+            font-size: 14px;
+            line-height: 22px;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        h3 {
+            font-size: 20px;
+        }
+        .NM-title {
+            font-size: 22px;
+            line-height: 28px;
+        }
+        .NM-statistics .numbers {
+            flex-direction: column;
+            text-align: center;
+            div {
+                margin-bottom: 20px;
+            }
+            h3 {
+                font-size: 20px;
+                margin-bottom: 15px;
+            }
+        }
+        .NM-video iframe {
+            height: 300px !important;
+        }
+        .NM-company-info {
+            .info-box {
+                padding: 35px;
+            }
+            .NM-title {
+                margin-top: 3rem;
+            }
+            p {
+                padding: 20px 0;
+            }
+        }
+    }

@@ -1,0 +1,202 @@
+/*** view page styles ****/
+
+.NM {
+    &-intro {
+        h1 {
+            padding-bottom: 20px;
+        }
+        .img-fluid {
+            width: 100%
+        }
+        .img-box {
+            position: relative;
+            .absolute-img {
+                position: absolute;
+                left: 16px;
+                top: 16px
+            }
+        }
+        .btn {
+            padding: 12px 20px;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+    }
+    &-statistics {
+        padding-top: 120px;
+        padding-bottom: 50px;
+        h3 {
+            flex: 0 0 auto;
+            width: auto;
+            margin-right: 20%;
+        }
+        .d-flex {
+            justify-content: space-between;
+        }
+        .numbers {
+            flex: 1 0 0%;
+            display: flex;
+            justify-content: space-between;
+            font-weight: 100;
+            text-transform: uppercase;
+            color: $sub-text;
+            h3 {
+                font-size: 36px;
+            }
+        }
+    }
+    &-video {
+        padding-bottom: 5%;
+        .container {
+            max-width: 1330px
+        }
+    }
+    &-text-box {
+        line-height: 2rem;
+        font-size: 20px;
+        background: $light-brown;
+        padding: 15px 0;
+        .btn {
+            height: 60px;
+            padding: 16px;
+            text-transform: uppercase;
+            align-items: center;
+            i {
+                margin-right: 15px;
+                font-size: 20px;
+            }
+        }
+        .container {
+            max-width: 1044px
+        }
+        &.video-box {
+            padding-top: 95px;
+            padding-bottom: 95px;
+        }
+        &.packages-box {
+            padding-top: 40px;
+        }
+    }
+    &-slider {
+        padding-bottom: 80px;
+        .container-fluid {
+            padding: 0;
+        }
+        .view-slider {
+            margin: 2.5rem auto
+        }
+        .slider-box {
+            text-align: center;
+            h3 {
+                font-size: 30px;
+                line-height: 46px;
+                font-weight: 400;
+                color: #53565a;
+                margin-top: 10px;
+            }
+            .img-block {
+                position: relative;
+                &::before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0, 0, 0, 0.5);
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 55vh;
+            }
+        }
+        .slick-slider {
+            .slick-prev,
+            .slick-next {
+                width: 45px;
+                height: 45px;
+                &::before {
+                    display: none;
+                }
+            }
+            .slick-next {
+                right: 25%;
+            }
+            .slick-prev {
+                left: 25%;
+                z-index: 9;
+            }
+            .slick-slide {
+                .slider-box {
+                    transform: scale(.8);
+                    transition: transform .5s cubic-bezier(.4, 0, .2, 1);
+                }
+                &.slick-center {
+                    .slider-box {
+                        transform: scale(1);
+                        max-width: 500px;
+                        margin: 0 auto;
+                        .img-block {
+                            &::before {
+                                background: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-company-info {
+        font-size: 17px;
+        line-height: 30px;
+        text-align: center;
+        .NM-title {
+            margin-top: 5rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+        }
+        p {
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+        .right-side {
+            padding-left: 32px;
+            padding-right: 0;
+        }
+        .left-side {
+            padding-left: 0;
+            padding-right: 32px;
+        }
+        .info-box {
+            background: #b0776c1f;
+            padding: 50px;
+            min-height: 100%;
+        }
+        .left-img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &-booking {
+        height: 10rem;
+        .container {
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn {
+            padding: 15px;
+            border: none;
+            width: 100%;
+            max-width: 192px;
+            height: 56px;
+        }
+    }
+}

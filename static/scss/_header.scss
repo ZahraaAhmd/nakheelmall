@@ -1,0 +1,113 @@
+/*** header styles ***/
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    padding: 8px 16px;
+    background: #fff;
+    .search-btn {
+        background: transparent;
+        border-color: transparent;
+        border-radius: 4px;
+        padding: 6px 6px 5px;
+        box-shadow: none;
+        outline: none;
+        margin-left: 6px;
+        transition: all 0.3s ease-in-out;
+        &:hover,
+        &:focus {
+            background: $brown;
+            color: #fff;
+        }
+    }
+    .top-menu {
+        .container-fluid {
+            max-width: 1450px;
+            text-align: right;
+        }
+        a {
+            color: $dark-gray;
+            font-size: 16px;
+            line-height: 1.5;
+            &:hover,
+            &:active {
+                color: #af776c
+            }
+        }
+        @media(max-width:991.98px) {
+            display: none
+        }
+    }
+    nav {
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .nav-collapse {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        .nav-brand {
+            margin-right: 30px;
+            margin-left: 30px;
+        }
+        ul {
+            list-style-type: none;
+            list-style: none;
+            li {
+                display: inline-block;
+                a {
+                    display: block;
+                    color: $brown;
+                    font-size: 15px;
+                    line-height: 23px;
+                    text-transform: uppercase;
+                    padding: 12px 16px
+                }
+            }
+        }
+    }
+    .mobile-view {
+        display: none;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        .toggle-btn {
+            border: 0;
+            box-shadow: none;
+            outline: none;
+            background: transparent;
+            font-size: 25px;
+            color: $btn-brown;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                color: #000
+            }
+        }
+        .search-btn {
+            background: $brown;
+            color: #fff;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            margin-left: 15px;
+        }
+        div {
+            display: flex;
+            align-items: center;
+        }
+        a {
+            i {
+                color: #000;
+                font-size: 25px;
+            }
+        }
+    }
+}
