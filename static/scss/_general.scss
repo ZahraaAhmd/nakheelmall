@@ -278,3 +278,25 @@ h3 {
         margin-bottom: 3rem !important;
     }
 }
+
+
+/*** animation style ****/
+
+.animation-float {
+    animation-name: float;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+    50% {
+        transform: translatey(-20px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
