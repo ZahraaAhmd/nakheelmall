@@ -25,11 +25,32 @@ $('.view-slider').slick({
         }
     ]
 });
-
+/* story slider */
+$('.story-slider').slick({
+    arrows: false,
+    dots: true,
+    autoplay: true,
+    slidesToShow: 1,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear'
+});
 
 /*** general settings  */
 $(document).ready(function() {
     $("nav .toggle-btn").click(function() {
         $(".nav-collapse").toggleClass("show");
-    })
+    });
+    $(".search-btn").click(function() {
+        $(".NM-search-block").addClass("show");
+    });
+    $(".toggle-search").click(function() {
+        $(".NM-search-block").removeClass("show");
+    });
+    $(".toggle-search").click(function() {
+        $(".NM-search-block").removeClass("show");
+    });
+
 })
