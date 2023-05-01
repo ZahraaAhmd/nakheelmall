@@ -89,6 +89,12 @@ h3 {
   margin-bottom: 0.5rem;
 }
 
+.big-title {
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
 /*** text color styles ****/
 .text-brown {
   color: #B0776C;
@@ -175,10 +181,19 @@ h3 {
   width: 100%;
 }
 
+.col-6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
 @media (min-width: 576px) {
   .col-sm-6 {
     flex: 0 0 auto;
     width: 50%;
+  }
+  .col-sm-3 {
+    flex: 0 0 auto;
+    width: 25%;
   }
 }
 
@@ -202,6 +217,10 @@ h3 {
 }
 
 @media (min-width: 992px) {
+  .col-lg-2 {
+    flex: 0 0 auto;
+    width: 16.66666667%;
+  }
   .col-lg-5 {
     flex: 0 0 auto;
     width: 41.66666667%;
@@ -254,6 +273,14 @@ h3 {
 
 .mb-5 {
   margin-bottom: 3rem !important;
+}
+
+.mt-3 {
+  margin-top: 1.5rem !important;
+}
+
+.mt-5 {
+  margin-top: 3rem !important;
 }
 
 /*** animation style ****/
@@ -845,6 +872,221 @@ header .mobile-view a i {
   height: 56px;
 }
 
+/*** inner pages style ****/
+.main-content2 {
+  margin-top: 100px;
+}
+
+.main-content2 p {
+  font-size: 17px;
+  line-height: 18px;
+  margin-bottom: 16px;
+}
+
+.NM-hero {
+  position: relative;
+}
+
+.NM-hero .hero-img {
+  /* position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;*/
+  width: 100%;
+}
+
+.NM-hero .hero-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: #c3c0c0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.NM-about-hotel {
+  position: relative;
+  padding-top: 4rem;
+  color: #fff;
+}
+
+.NM-about-hotel::before {
+  content: "";
+  display: block;
+  background: #B97469;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  height: 85%;
+}
+
+.NM-about-hotel .container {
+  z-index: 9;
+  position: relative;
+}
+
+.NM-about-hotel .container-fluid {
+  padding-right: 0;
+}
+
+.NM-about-hotel .NM-title {
+  text-transform: uppercase;
+  width: 230px;
+}
+
+.NM-about-hotel .content {
+  width: calc(100% - 230px);
+}
+
+.NM-about-hotel .content .features {
+  margin-top: 80px;
+}
+
+.NM-about-hotel .content p {
+  line-height: 1.8;
+}
+
+.NM-about-hotel .d-flex {
+  display: flex;
+  margin-bottom: 100px;
+}
+
+.NM-about-hotel .about-slider img {
+  width: 100%;
+  height: 500px;
+}
+
+.NM-about-hotel .about-slider .slick-slide {
+  padding: 0 30px;
+}
+
+.NM-offers {
+  padding-top: 120px;
+}
+
+.NM-offers .big-title {
+  margin-bottom: 64px;
+}
+
+.NM-offers .offer-block {
+  color: #141414;
+}
+
+.NM-offers .offer-block .NM-title {
+  margin-bottom: 0.5rem;
+  color: #53565A;
+}
+
+.NM-offers .offer-block ul {
+  font-size: 16px;
+  line-height: 1.5;
+  padding-left: 40px;
+  margin-bottom: 16px;
+}
+
+.NM-offers .business-block {
+  background: url("https://www.nakheelmall.ae/uploads/lunch.png");
+  width: 100%;
+  background-size: cover;
+  padding: 7rem 2rem;
+  position: relative;
+  margin-bottom: 3rem;
+  color: #000000;
+}
+
+.NM-contact-hotel {
+  padding-bottom: 80px;
+}
+
+.NM-contact-hotel h4 {
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+.NM-contact-hotel .col-lg-2 {
+  padding: 0 15px;
+}
+
+.NM-contact-hotel .btn {
+  width: 100%;
+  text-transform: uppercase;
+  height: 55px;
+  font-size: 16px;
+}
+
+.NM-contact-hotel .contact-box {
+  box-shadow: 0 4px 10px 0px #d8d8d8;
+  padding: 3rem;
+  height: 100%;
+  box-sizing: border-box;
+  border-bottom: 7px solid #ba6557;
+}
+
+.NM-contact-hotel .contact-box .NM-title {
+  margin-bottom: 4rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.NM-contact-hotel .contact-box p {
+  margin-bottom: 4rem;
+}
+
+.NM-contact-hotel .contact-box p span {
+  display: block;
+  font-size: 16px;
+  color: #7e7e7e;
+}
+
+.NM-contact-hotel .more-info {
+  position: relative;
+  margin-top: 80px;
+}
+
+.NM-contact-hotel .more-info .col-md-6 {
+  position: relative;
+  padding-left: 120px;
+}
+
+.NM-contact-hotel .more-info .col-md-6:first-child::after {
+  content: "";
+  position: absolute;
+  margin: auto 0;
+  top: 25%;
+  right: 0;
+  width: 1px;
+  height: 50%;
+  background-color: #d5d5d5;
+}
+
+.NM-contact-hotel .more-info .NM-title {
+  margin-bottom: 0.5rem;
+}
+
+.NM-contact-hotel .more-info .NM-title img {
+  margin-right: 15px;
+  vertical-align: middle;
+  max-width: 45px;
+}
+
+.NM-contact-hotel .more-info ul {
+  padding-left: 40px;
+}
+
+.NM-contact-hotel .more-info ul li {
+  margin-bottom: 0.8rem;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
 /**** footer style *****/
 footer {
   background: #FBF7F7;
@@ -949,6 +1191,12 @@ footer .social-icons a i {
 }
 
 /*** pages media query ****/
+@media (min-width: 992px) {
+  .show-md {
+    display: none !important;
+  }
+}
+
 @media (max-width: 1400px) {
   .NM-stories .bg-img img {
     max-width: 200px;
@@ -979,6 +1227,9 @@ footer .social-icons a i {
   .container {
     padding-right: 30px;
     padding-left: 30px;
+  }
+  .main-content2 {
+    margin-top: 80px;
   }
   header {
     padding-top: 20px;
@@ -1068,6 +1319,51 @@ footer .social-icons a i {
   .NM-stories .story-slider .story-img img {
     object-fit: initial;
   }
+  .NM-about-hotel .NM-title {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .NM-about-hotel .content {
+    width: 100%;
+  }
+  .NM-about-hotel .about-slider .slick-slide {
+    padding: 0 15px;
+  }
+  .NM-about-hotel .about-slider img {
+    width: 100%;
+    height: 350px;
+  }
+  .NM-offers {
+    padding-top: 60px;
+  }
+  .NM-offers .big-title {
+    margin-bottom: 40px;
+    font-size: 50px;
+  }
+  .hide-md {
+    display: none;
+  }
+  .NM-contact-hotel .NM-title {
+    font-size: 24px;
+  }
+  .NM-contact-hotel .NM-row {
+    align-items: initial !important;
+  }
+  .NM-contact-hotel .NM-row .hotel-img {
+    object-fit: cover;
+    height: 100%;
+    box-shadow: 0 4px 10px 0px #d8d8d8;
+  }
+  .NM-contact-hotel .more-info .col-md-6 {
+    padding-left: 30px;
+  }
+  .NM-contact-hotel .contact-box .NM-title {
+    margin-bottom: 2rem;
+    font-size: 24px;
+  }
+  .NM-contact-hotel .contact-box p {
+    margin-bottom: 2rem;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -1083,6 +1379,9 @@ footer .social-icons a i {
   .NM-title {
     font-size: 26px;
     line-height: 32px;
+  }
+  .main-content2 p {
+    font-size: 14px;
   }
   .NM-intro .NM-row {
     flex-direction: column-reverse;
@@ -1153,6 +1452,15 @@ footer .social-icons a i {
   }
   .NM-video iframe {
     height: 400px !important;
+  }
+  .NM-contact-hotel .more-info .col-md-6:first-child {
+    margin-bottom: 30px;
+  }
+  .NM-contact-hotel .more-info .col-md-6:first-child::after {
+    display: none;
+  }
+  .NM-contact-hotel .more-info ul {
+    padding-left: 25px;
   }
   footer .d-flex {
     justify-content: space-between;

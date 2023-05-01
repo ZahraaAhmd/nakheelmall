@@ -1,0 +1,195 @@
+/*** inner pages style ****/
+
+.main-content2 {
+    margin-top: 100px;
+    p {
+        font-size: 17px;
+        line-height: 18px;
+        margin-bottom: 16px;
+    }
+}
+
+.NM {
+    &-hero {
+        position: relative;
+        .hero-img {
+            /* position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;*/
+            width: 100%
+        }
+        .hero-content {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            color: #c3c0c0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &-about-hotel {
+        position: relative;
+        // background: #B97469;
+        //  background-size: 80%;
+        padding-top: 4rem;
+        //padding-bottom: 24rem;
+        color: #fff;
+        &::before {
+            content: "";
+            display: block;
+            background: #B97469;
+            position: absolute;
+            top: -10px;
+            left: 0;
+            width: 100%;
+            height: 85%;
+        }
+        .container {
+            //  max-width: 1230px;
+            z-index: 9;
+            position: relative;
+        }
+        .container-fluid {
+            padding-right: 0;
+        }
+        .NM-title {
+            text-transform: uppercase;
+            width: 230px;
+        }
+        .content {
+            width: calc(100% - 230px);
+            .features {
+                margin-top: 80px;
+            }
+            p {
+                line-height: 1.8;
+            }
+        }
+        .d-flex {
+            display: flex;
+            margin-bottom: 100px;
+        }
+        .about-slider {
+            img {
+                width: 100%;
+                height: 500px;
+                //object-fit: cover;
+            }
+            .slick-slide {
+                padding: 0 30px
+            }
+        }
+    }
+    &-offers {
+        padding-top: 120px;
+        .container {
+            // max-width: 1230px;
+        }
+        .big-title {
+            margin-bottom: 64px;
+        }
+        .offer-block {
+            color: #141414;
+            .NM-title {
+                margin-bottom: 0.5rem;
+                color: $dark-gray
+            }
+            p {}
+            ul {
+                font-size: 16px;
+                line-height: 1.5;
+                padding-left: 40px;
+                margin-bottom: 16px;
+            }
+        }
+        .business-block {
+            background: url("https://www.nakheelmall.ae/uploads/lunch.png");
+            width: 100%;
+            background-size: cover;
+            padding: 7rem 2rem;
+            position: relative;
+            margin-bottom: 3rem;
+            color: #000000
+        }
+    }
+    &-contact-hotel {
+        padding-bottom: 80px;
+        h4 {
+            font-weight: 500;
+            font-size: 21px;
+            line-height: 1.2;
+            text-transform: uppercase;
+            margin-bottom: 3rem;
+        }
+        .col-lg-2 {
+            padding: 0 15px;
+        }
+        .btn {
+            width: 100%;
+            text-transform: uppercase;
+            height: 55px;
+            font-size: 16px;
+        }
+        .contact-box {
+            box-shadow: 0 4px 10px 0px #d8d8d8;
+            padding: 3rem;
+            height: 100%;
+            box-sizing: border-box;
+            border-bottom: 7px solid #ba6557;
+            .NM-title {
+                margin-bottom: 4rem;
+                font-size: 2rem;
+                text-transform: uppercase;
+            }
+            p {
+                margin-bottom: 4rem;
+                span {
+                    display: block;
+                    font-size: 16px;
+                    color: #7e7e7e
+                }
+            }
+        }
+        .more-info {
+            position: relative;
+            margin-top: 80px;
+            .col-md-6 {
+                position: relative;
+                padding-left: 120px;
+                &:first-child {
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        margin: auto 0;
+                        top: 25%;
+                        right: 0;
+                        width: 1px;
+                        height: 50%;
+                        background-color: #d5d5d5;
+                    }
+                }
+            }
+            .NM-title {
+                margin-bottom: 0.5rem;
+                img {
+                    margin-right: 15px;
+                    vertical-align: middle;
+                    max-width: 45px;
+                }
+            }
+            ul {
+                padding-left: 40px;
+                li {
+                    margin-bottom: 0.8rem;
+                    font-size: 16px;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+}

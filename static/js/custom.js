@@ -37,7 +37,11 @@ $('.story-slider').slick({
     fade: true,
     cssEase: 'linear'
 });
-
+$('.about-slider').slick({
+    arrows: false,
+    dots: false,
+    slidesToShow: 1.1,
+});
 /*** general settings  */
 $(document).ready(function() {
     $("nav .toggle-btn").click(function() {
@@ -52,5 +56,12 @@ $(document).ready(function() {
     $(".toggle-search").click(function() {
         $(".NM-search-block").removeClass("show");
     });
-
+    /*
+     * make slick slider container padding left as other content
+     */
+    let Screenwidth = $(window).width();
+    let padding = Screenwidth - 1140;
+    if (Screenwidth > 1140) {
+        $(".NM-about-hotel .container-fluid").css("padding-left", padding / 2);
+    }
 })
